@@ -1,0 +1,46 @@
+{
+  "name": {
+    "tr": "Yazışma",
+    "en": "Write",
+    "ar": "المراسلة"
+  },
+  "status": "play",
+  "category": "",
+  "id": "iletisim",
+  "url": "",
+  "path": "iletisim",
+  "index": 3,
+  "icon": "edit",
+  "desing": {
+    "header": [],
+    "body": [
+      "ab2tw8"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Kolektife mesaj (demo).",
+    "en": "A message to the collective (demo).",
+    "ar": "رسالة إلى التجمّع (تجريبي)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Yazışma",
+    "en": "Write",
+    "ar": "المراسلة"
+  },
+  "keyword": {
+    "tr": "iletişim",
+    "en": "contact",
+    "ar": "اتصال"
+  },
+  "text": {},
+  "update": "2026-11-16T22:49:44.102Z",
+  "date": "2026-10-30"
+}

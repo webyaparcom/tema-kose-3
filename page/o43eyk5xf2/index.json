@@ -1,0 +1,39 @@
+{
+  "id": "o43eyk5xf2",
+  "name": {
+    "tr": "Davet",
+    "en": "Invite",
+    "ar": "دعوة"
+  },
+  "description": {
+    "tr": "Söyleşi, atölye ve konuk köşe (kurgusal).",
+    "en": "Talks, workshops and guest columns (fictional).",
+    "ar": "حوارات وورش وعمود ضيف (افتراضي)."
+  },
+  "keyword": {
+    "tr": "davet, atölye",
+    "en": "invite, workshop",
+    "ar": "دعوة، ورشة"
+  },
+  "path": "hizmetler",
+  "icon": "mail",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "tx2yzx"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Davet",
+    "en": "Invite",
+    "ar": "دعوة"
+  },
+  "date": "2026-11-16T22:44:14.786Z",
+  "update": "2026-11-16T22:49:44.081Z"
+}
