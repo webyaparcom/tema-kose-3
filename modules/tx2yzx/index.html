@@ -1,0 +1,106 @@
+<section class="modulex-hizmet-kartvizit-cevir{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-hizmet-kartvizit-cevir-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* hizmet-kartvizit-cevir — hizmet-ikon-madalyon çerçevesiz amblemler, hizmet-bento boyutlu mozaiktir; bu modülde hizmetler iki yüzlü kartvizitlerdir — 3B çevirme, ayrı çevir düğmesi (aria-pressed) ve kartvizit oranlı ön yüz; ailede çift yüzlü kart yok. */
+  .modulex-hizmet-kartvizit-cevir { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-hizmet-kartvizit-cevir *, .modulex-hizmet-kartvizit-cevir *::before, .modulex-hizmet-kartvizit-cevir *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-hizmet-kartvizit-cevir :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-hizmet-kartvizit-cevir :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-hizmet-kartvizit-cevir :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-hizmet-kartvizit-cevir :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-hizmet-kartvizit-cevir img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-hizmet-kartvizit-cevir) img { height: auto; }
+  .modulex-hizmet-kartvizit-cevir [hidden] { display: none !important; }
+  .modulex-hizmet-kartvizit-cevir :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-hizmet-kartvizit-cevir :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-hizmet-kartvizit-cevir-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-hizmet-kartvizit-cevir-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-hizmet-kartvizit-cevir--bassiz .modulex-hizmet-kartvizit-cevir-bas { display: none; }
+  .modulex-hizmet-kartvizit-cevir-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-hizmet-kartvizit-cevir-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-hizmet-kartvizit-cevir-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-hizmet-kartvizit-cevir-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-hizmet-kartvizit-cevir-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-hizmet-kartvizit-cevir-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-hizmet-kartvizit-cevir-dugme:hover { transform: translateY(-2px); }
+  .modulex-hizmet-kartvizit-cevir-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-hizmet-kartvizit-cevir-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-hizmet-kartvizit-cevir-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-hizmet-kartvizit-cevir-kvizgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 28px 24px; }
+  .modulex-hizmet-kartvizit-cevir-kvhucre { display: grid; align-content: start; gap: 12px; perspective: 1400px; }
+  .modulex-hizmet-kartvizit-cevir-kv { position: relative; display: grid; gap: 12px; }
+  .modulex-hizmet-kartvizit-cevir--kvjs .modulex-hizmet-kartvizit-cevir-kv { gap: 0; transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .modulex-hizmet-kartvizit-cevir--kvjs .modulex-hizmet-kartvizit-cevir-kv.modulex-hizmet-kartvizit-cevir-kv--acik { transform: rotateY(180deg); }
+  .modulex-hizmet-kartvizit-cevir-kvyuz { position: relative; display: grid; min-height: 200px; padding: 26px 28px; border-radius: 14px; box-shadow: 0 20px 36px -26px color-mix(in srgb, --text-- 65%, transparent); }
+  .modulex-hizmet-kartvizit-cevir--kvjs .modulex-hizmet-kartvizit-cevir-kvyuz { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .modulex-hizmet-kartvizit-cevir-kvon { grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto minmax(16px, 1fr) auto; overflow: hidden; border: 1px solid --cizgi--; background: --kartBg--; }
+  .modulex-hizmet-kartvizit-cevir-kvserit { position: absolute; inset-block: 0; inset-inline-start: 0; width: 8px; background: --accent--; transition: width 0.35s ease; }
+  .modulex-hizmet-kartvizit-cevir-kv:hover .modulex-hizmet-kartvizit-cevir-kvserit { width: 14px; }
+  .modulex-hizmet-kartvizit-cevir-kvlogo { grid-column: 2; grid-row: 1; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: color-mix(in srgb, --accent-- 14%, --bg--); color: --accentInk--; }
+  .modulex-hizmet-kartvizit-cevir-kvikon { font-size: 28px; }
+  .modulex-hizmet-kartvizit-cevir-kvad { grid-column: 1; grid-row: 3; align-self: end; display: grid; gap: 4px; }
+  .modulex-hizmet-kartvizit-cevir:not(.modulex-hizmet-kartvizit-cevir--kvjs) .modulex-hizmet-kartvizit-cevir-kvad { grid-column: 1 / -1; }
+  .modulex-hizmet-kartvizit-cevir-kvad .modulex-hizmet-kartvizit-cevir-kbaslik { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.2; }
+  .modulex-hizmet-kartvizit-cevir-kvfiyat { color: --accentInk--; font-weight: 750; font-variant-numeric: tabular-nums; }
+  .modulex-hizmet-kartvizit-cevir-kvno { grid-column: 1; grid-row: 1; align-self: start; color: --muted--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; font-variant-numeric: tabular-nums; }
+  .modulex-hizmet-kartvizit-cevir-kvcevir { grid-column: 2; grid-row: 3; align-self: end; display: none; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid --cizgi--; border-radius: 50%; background: --bg--; color: --text--; transition: background-color 0.25s ease, color 0.25s ease, transform 0.4s ease; }
+  .modulex-hizmet-kartvizit-cevir--kvjs .modulex-hizmet-kartvizit-cevir-kvcevir { display: grid; }
+  .modulex-hizmet-kartvizit-cevir-kvcevir:hover { background-color: --accent--; color: --accentText--; transform: rotate(180deg); }
+  .modulex-hizmet-kartvizit-cevir-kvgizli { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .modulex-hizmet-kartvizit-cevir-kvarka { align-content: center; gap: 12px; background: --vurguBg--; color: --vurguText--; }
+  .modulex-hizmet-kartvizit-cevir--kvjs .modulex-hizmet-kartvizit-cevir-kvarka { transform: rotateY(180deg); }
+  .modulex-hizmet-kartvizit-cevir-kvarka .modulex-hizmet-kartvizit-cevir-kmetin { font-size: 1rem; line-height: 1.65; }
+  .modulex-hizmet-kartvizit-cevir-kvarka .modulex-hizmet-kartvizit-cevir-maddeler .material-symbols-outlined { color: --vurguText--; }
+  .modulex-hizmet-kartvizit-cevir-kvhucre > .modulex-hizmet-kartvizit-cevir-git { justify-self: start; }
+  @media (max-width: 768px) {
+    .modulex-hizmet-kartvizit-cevir-kvyuz { min-height: 180px; padding: 22px; }
+    .modulex-hizmet-kartvizit-cevir-kvad .modulex-hizmet-kartvizit-cevir-kbaslik { font-size: 1.25rem; }
+  }
+  .modulex-hizmet-kartvizit-cevir-git { position: relative; display: inline-flex; align-items: center; gap: 6px; width: fit-content; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.25s ease; }
+  .modulex-hizmet-kartvizit-cevir-git:hover { gap: 10px; }
+  .modulex-hizmet-kartvizit-cevir-git .material-symbols-outlined { font-size: 18px; }
+  .modulex-hizmet-kartvizit-cevir-maddeler { display: grid; gap: 6px; }
+  .modulex-hizmet-kartvizit-cevir-maddeler li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.93rem; }
+  .modulex-hizmet-kartvizit-cevir-maddeler .material-symbols-outlined { flex: none; margin-block-start: 1px; color: --accentInk--; font-size: 18px; }
+  .modulex-hizmet-kartvizit-cevir-fiyat { color: --accentInk--; font-weight: 800; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-hizmet-kartvizit-cevir :is(.modulex-hizmet-kartvizit-cevir-baslik, .modulex-hizmet-kartvizit-cevir-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-hizmet-kartvizit-cevir-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-hizmet-kartvizit-cevir { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-hizmet-kartvizit-cevir *, .modulex-hizmet-kartvizit-cevir *::before, .modulex-hizmet-kartvizit-cevir *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-hizmet-kartvizit-cevir";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const kartCevir = (s, P) => {
+        const k = [...s.querySelectorAll("[data-kv-kart]")];
+        if (!k.length) return;
+        s.classList.add(P + "--kvjs");
+        k.forEach((c) => {
+          const b = c.querySelector("[data-kv]");
+          const cevir = () => { const a = !c.classList.contains(P + "-kv--acik"); c.classList.toggle(P + "-kv--acik", a); if (b) b.setAttribute("aria-pressed", String(a)); };
+          if (b) b.addEventListener("click", (e) => { e.stopPropagation(); cevir(); });
+          c.addEventListener("click", (e) => { if (!e.target.closest("a, button")) cevir(); });
+        });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      kartCevir(s, P, az);
+    });
+  })();
+</script>

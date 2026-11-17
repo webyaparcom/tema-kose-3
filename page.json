@@ -1,0 +1,110 @@
+{
+  "data": [
+    {
+      "id": "o43eyk5xf2",
+      "name": {
+        "tr": "Davet",
+        "en": "Invite",
+        "ar": "دعوة"
+      },
+      "description": {
+        "tr": "Söyleşi, atölye ve konuk köşe (kurgusal).",
+        "en": "Talks, workshops and guest columns (fictional).",
+        "ar": "حوارات وورش وعمود ضيف (افتراضي)."
+      },
+      "path": "hizmetler",
+      "icon": "mail",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "tx2yzx"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Yazarlar",
+        "en": "Writers",
+        "ar": "الكتّاب"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "groups",
+      "desing": {
+        "header": [],
+        "body": [
+          "aqsreo",
+          "gmu9jj"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Altı kurgusal köşe yazarı ve yol defteri.",
+        "en": "Six fictional columnists and the road book.",
+        "ar": "ستة كتّاب أعمدة افتراضيين ودفتر الطريق."
+      }
+    },
+    {
+      "id": "3gb0eprxu6",
+      "name": {
+        "tr": "Yazılar",
+        "en": "Columns",
+        "ar": "المقالات"
+      },
+      "description": {
+        "tr": "Haftanın yazıları (kurgusal).",
+        "en": "This week’s columns (fictional).",
+        "ar": "مقالات الأسبوع (افتراضي)."
+      },
+      "path": "referanslar",
+      "icon": "article",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "gzqn82"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "name": {
+        "tr": "Yazışma",
+        "en": "Write",
+        "ar": "المراسلة"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 3,
+      "icon": "edit",
+      "desing": {
+        "header": [],
+        "body": [
+          "ab2tw8"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Kolektife mesaj (demo).",
+        "en": "A message to the collective (demo).",
+        "ar": "رسالة إلى التجمّع (تجريبي)."
+      }
+    }
+  ],
+  "desc": []
+}

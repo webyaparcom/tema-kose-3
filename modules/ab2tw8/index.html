@@ -1,0 +1,176 @@
+<section class="modulex-iletisim-cumle-form{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-iletisim-cumle-form-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* iletisim-cumle-form — Ailedeki tüm formlar alanları kutu / ızgara içinde dizer; bu modül TİPOGRAFİK AKIŞ: display:inline parçalar, field-sizing: content ile yazıldıkça büyüyen alanlar, noktalı → düz alt çizgi odağı, repeating-linear-gradient defter satırlı textarea ve CSS sayacıyla (decimal-leading-zero) numaralanan kanal sütunu. */
+  .modulex-iletisim-cumle-form { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-iletisim-cumle-form *, .modulex-iletisim-cumle-form *::before, .modulex-iletisim-cumle-form *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-iletisim-cumle-form :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-iletisim-cumle-form :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-iletisim-cumle-form :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-iletisim-cumle-form :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-iletisim-cumle-form img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-iletisim-cumle-form) img { height: auto; }
+  .modulex-iletisim-cumle-form [hidden] { display: none !important; }
+  .modulex-iletisim-cumle-form :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-iletisim-cumle-form :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-iletisim-cumle-form-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-iletisim-cumle-form-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-iletisim-cumle-form--bassiz .modulex-iletisim-cumle-form-bas { display: none; }
+  .modulex-iletisim-cumle-form-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-iletisim-cumle-form-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-iletisim-cumle-form-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-iletisim-cumle-form-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-iletisim-cumle-form-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-iletisim-cumle-form-dugme:hover { transform: translateY(-2px); }
+  .modulex-iletisim-cumle-form-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-iletisim-cumle-form-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-iletisim-cumle-form-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-iletisim-cumle-form-cu-yazi { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 0.38fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .modulex-iletisim-cumle-form-cu-ana { display: grid; gap: clamp(20px, 3vw, 30px); min-width: 0; }
+  .modulex-iletisim-cumle-form-cu-bas { display: grid; gap: 12px; }
+  .modulex-iletisim-cumle-form-cu-form { display: grid; gap: 24px; min-width: 0; }
+  .modulex-iletisim-cumle-form-cu-fbas { font-size: 1.2rem; font-weight: 750; }
+  .modulex-iletisim-cumle-form-cu-cumle { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.3rem, 2.8vw, 2.2rem); font-weight: 650; line-height: 2; }
+  .modulex-iletisim-cumle-form-cu-parca { display: inline; }
+  .modulex-iletisim-cumle-form-cu-parca + .modulex-iletisim-cumle-form-cu-parca::before { content: ""; display: inline-block; inline-size: 0.6em; }
+  .modulex-iletisim-cumle-form-cu-et { color: --muted--; }
+  .modulex-iletisim-cumle-form-cu-gir { display: inline-block; inline-size: auto; min-inline-size: 7ch; max-inline-size: 100%; field-sizing: content; margin-inline: 0.3em; padding-block: 0; padding-inline: 0.15em; border: 0; border-block-end: 3px dotted --accentInk--; border-radius: 0; background: transparent; color: --text--; font: inherit; line-height: 1.3; vertical-align: baseline; transition: border-color 0.2s ease, background 0.2s ease; }
+  .modulex-iletisim-cumle-form-cu-gir:focus { outline: none; border-block-end-style: solid; border-block-end-color: --accent--; background: color-mix(in srgb, --accent-- 8%, transparent); }
+  .modulex-iletisim-cumle-form-cu-gir:user-invalid { border-block-end-style: dashed; }
+  .modulex-iletisim-cumle-form-cu-gir option { background: --bg--; color: --text--; font-size: 1rem; }
+  .modulex-iletisim-cumle-form-cu-mesaj { display: grid; gap: 8px; }
+  .modulex-iletisim-cumle-form-cu-et--blok { color: --text--; font-size: 1rem; font-weight: 700; }
+  .modulex-iletisim-cumle-form-cu-met { inline-size: 100%; min-height: 160px; padding-block: 0; padding-inline: 2px; border: 0; border-block: 1px solid --cizgi--; background: repeating-linear-gradient(to bottom, transparent 0 39px, --cizgi-- 39px 40px); color: inherit; font: inherit; font-size: 1.15rem; line-height: 40px; resize: vertical; transition: border-color 0.2s ease; }
+  .modulex-iletisim-cumle-form-cu-met:focus { outline: none; border-block-color: --accent--; }
+  .modulex-iletisim-cumle-form-cu-alt { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; }
+  .modulex-iletisim-cumle-form-cu-onay { display: flex; flex: 1 1 260px; gap: 10px; align-items: flex-start; font-size: 0.92rem; }
+  .modulex-iletisim-cumle-form-cu-onay input { flex: none; inline-size: 20px; block-size: 20px; margin-block-start: 2px; accent-color: --accent--; cursor: pointer; }
+  .modulex-iletisim-cumle-form-cu-onay a { color: inherit; font-weight: 700; text-underline-offset: 3px; }
+  .modulex-iletisim-cumle-form-cu-kanallar { position: sticky; inset-block-start: 96px; display: grid; counter-reset: cu; }
+  .modulex-iletisim-cumle-form-cu-kn { display: grid; gap: 3px; min-width: 0; padding-block: 16px; border-block-start: 1px solid --cizgi--; counter-increment: cu; transition: padding 0.25s ease, border-color 0.25s ease; }
+  .modulex-iletisim-cumle-form-cu-kn::before { content: counter(cu, decimal-leading-zero); color: --accentInk--; font-size: 0.8rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .modulex-iletisim-cumle-form-cu-kn:hover { padding-inline-start: 8px; border-block-start-color: --accent--; }
+  @media (max-width: 1024px) {
+    .modulex-iletisim-cumle-form-cu-yazi { grid-template-columns: minmax(0, 1fr); }
+    .modulex-iletisim-cumle-form-cu-kanallar { position: static; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 0 24px; }
+  }
+  @media (max-width: 768px) {
+    .modulex-iletisim-cumle-form-cu-cumle { font-size: 1.2rem; line-height: 1.8; }
+    .modulex-iletisim-cumle-form-cu-parca { display: block; margin-block-end: 10px; }
+    .modulex-iletisim-cumle-form-cu-parca + .modulex-iletisim-cumle-form-cu-parca::before { display: none; }
+    .modulex-iletisim-cumle-form-cu-gir { display: block; inline-size: 100%; min-inline-size: 0; margin-inline: 0; }
+  }
+  .modulex-iletisim-cumle-form-kikon { flex: none; display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: color-mix(in srgb, --accent-- 14%, transparent); color: --accentInk--; font-size: 24px; }
+  .modulex-iletisim-cumle-form-ketiket { display: block; color: --muted--; font-size: 0.82rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; }
+  .modulex-iletisim-cumle-form-deger { color: inherit; font-weight: 650; text-decoration: none; overflow-wrap: anywhere; transition: color 0.2s ease; }
+  a.modulex-iletisim-cumle-form-deger:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-iletisim-cumle-form-eylem { display: inline-flex; align-items: center; gap: 6px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.2s ease; }
+  .modulex-iletisim-cumle-form-eylem:hover { gap: 10px; }
+  .modulex-iletisim-cumle-form-eylem .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-cumle-form-kopya { display: none; align-items: center; gap: 6px; min-height: 36px; padding: 6px 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: --text--; font: inherit; font-size: 0.85rem; font-weight: 650; transition: border-color 0.2s ease, background 0.2s ease; }
+  .modulex-iletisim-cumle-form--kjs .modulex-iletisim-cumle-form-kopya { display: inline-flex; }
+  .modulex-iletisim-cumle-form-kopya:hover { border-color: --accent--; }
+  .modulex-iletisim-cumle-form-kopya .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-cumle-form--kopyalandi { background: color-mix(in srgb, --accent-- 14%, transparent); }
+  .modulex-iletisim-cumle-form-sosyal { display: grid; gap: 10px; }
+  .modulex-iletisim-cumle-form-sbaslik { color: --muted--; font-size: 0.9rem; font-weight: 650; }
+  .modulex-iletisim-cumle-form-sliste { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-iletisim-cumle-form-cip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 14px; border: 1px solid --cizgi--; border-radius: 999px; color: inherit; font-weight: 650; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-iletisim-cumle-form-cip:hover { border-color: --accent--; transform: translateY(-2px); }
+  .modulex-iletisim-cumle-form-cikon { font-size: 18px; }
+  .modulex-iletisim-cumle-form-harita { position: relative; overflow: hidden; min-height: 280px; border-radius: --yuvarlak--; background: --kartBg--; }
+  .modulex-iletisim-cumle-form-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .modulex-iletisim-cumle-form-hdesen { position: absolute; inset: 0; display: grid; place-items: center; background-color: color-mix(in srgb, --accent-- 8%, --kartBg--); background-image: linear-gradient(color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), radial-gradient(circle at 30% 40%, color-mix(in srgb, --accent-- 18%, transparent) 0 18%, transparent 19%); background-size: 36px 36px, 36px 36px, 100% 100%; }
+  .modulex-iletisim-cumle-form-pin { color: --accentInk--; font-size: 56px; animation: modulex-iletisim-cumle-form-zipla 2.4s ease-in-out infinite; }
+  @keyframes modulex-iletisim-cumle-form-zipla { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .modulex-iletisim-cumle-form-hyol { position: absolute; inset-block-end: 16px; inset-inline-start: 16px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 16px; border-radius: 999px; background: --bg--; color: --text--; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px color-mix(in srgb, --text-- 16%, transparent); transition: transform 0.2s ease; }
+  .modulex-iletisim-cumle-form-hyol:hover { transform: translateY(-2px); }
+  .modulex-iletisim-cumle-form-hyol .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+
+  .modulex-iletisim-cumle-form-form { display: grid; gap: 18px; }
+  .modulex-iletisim-cumle-form-fbaslik { font-size: 1.3rem; font-weight: 750; }
+  .modulex-iletisim-cumle-form-alanlar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .modulex-iletisim-cumle-form-alan { display: flex; flex-direction: column-reverse; gap: 6px; }
+  .modulex-iletisim-cumle-form-alan--genis { grid-column: 1 / -1; }
+  .modulex-iletisim-cumle-form-etiket { font-size: 0.9rem; font-weight: 650; }
+  .modulex-iletisim-cumle-form-girdi { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid color-mix(in srgb, currentColor 26%, transparent); border-radius: 12px; background: color-mix(in srgb, currentColor 4%, transparent); color: inherit; font: inherit; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+  textarea.modulex-iletisim-cumle-form-girdi { min-height: 132px; resize: vertical; }
+  .modulex-iletisim-cumle-form-girdi:focus { outline: none; border-color: --accent--; box-shadow: 0 0 0 3px color-mix(in srgb, --accent-- 28%, transparent); }
+  .modulex-iletisim-cumle-form-secim { cursor: pointer; }
+  .modulex-iletisim-cumle-form-secim option { background: --bg--; color: --text--; }
+  .modulex-iletisim-cumle-form-onay { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; }
+  .modulex-iletisim-cumle-form-onay input { flex: none; width: 20px; height: 20px; margin-block-start: 2px; accent-color: --accent--; cursor: pointer; }
+  .modulex-iletisim-cumle-form-onay a { color: inherit; font-weight: 700; text-underline-offset: 3px; }
+  .modulex-iletisim-cumle-form-gonder { justify-self: start; font: inherit; font-weight: 700; cursor: pointer; }
+  .modulex-iletisim-cumle-form-gonder:disabled { opacity: 0.6; cursor: progress; }
+  .modulex-iletisim-cumle-form-durum { min-height: 1.5em; font-size: 0.95rem; font-weight: 650; }
+  .modulex-iletisim-cumle-form-durum:empty { display: none; }
+  .modulex-iletisim-cumle-form-durum--hata { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  .modulex-iletisim-cumle-form-bal { position: absolute; inset-inline-start: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  @media (max-width: 768px) {
+    .modulex-iletisim-cumle-form-alanlar { grid-template-columns: minmax(0, 1fr); }
+    .modulex-iletisim-cumle-form-gonder { justify-self: stretch; justify-content: center; }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-cumle-form :is(.modulex-iletisim-cumle-form-baslik, .modulex-iletisim-cumle-form-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-cumle-form-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-iletisim-cumle-form { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-iletisim-cumle-form *, .modulex-iletisim-cumle-form *::before, .modulex-iletisim-cumle-form *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-iletisim-cumle-form";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const form = (s, P) => {
+        s.querySelectorAll("form[data-fb-form]").forEach((f) => {
+          const durum = f.querySelector("[role=status]");
+          const yaz = (m, hata) => { if (durum) { durum.textContent = m || ""; durum.classList.toggle(P + "-durum--hata", !!hata); } };
+          let t0 = Date.now();
+          const al = (ad) => { const e = f.elements.namedItem(ad); return e && "value" in e ? String(e.value).trim() : ""; };
+          const etiket = (ad) => { const e = f.elements.namedItem(ad); const l = e && e.id ? f.querySelector(`label[for="${e.id}"]`) : null; return l ? l.textContent.trim() : ad; };
+          const konuMetin = () => { const e = f.elements.namedItem("topic"); return e && e.selectedIndex > 0 ? e.options[e.selectedIndex].text.trim() : ""; };
+          f.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (!f.checkValidity()) { f.reportValidity(); return; }
+            if (al("website")) return;
+            const govde = ["name", "email", "phone"].filter(al).map((k) => `${etiket(k)}: ${al(k)}`)
+              .concat(konuMetin() ? [`${etiket("topic")}: ${konuMetin()}`] : [], al("message") ? ["", al("message")] : []).join("\n");
+            const d = f.dataset;
+            if (d.action) {
+              const b = f.querySelector("[type=submit]");
+              if (b) b.disabled = true;
+              const yuk = { name: al("name"), email: al("email"), phone: al("phone"), topic: konuMetin(), message: al("message"), kvkk: true, lang: document.documentElement.lang || "", page: location.pathname, website: al("website"), t: Date.now() - t0 };
+              fetch(d.action, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(yuk) })
+                .then((r) => r.json().catch(() => ({})).then((j) => r.ok && j && j.ok !== false))
+                .then((ok) => { if (b) b.disabled = false; yaz(ok ? d.ok : d.hata, !ok); if (ok) { f.reset(); t0 = Date.now(); } })
+                .catch(() => { if (b) b.disabled = false; yaz(d.hata, true); });
+              return;
+            }
+            if (d.gonderim === "whatsapp" && d.wa) { window.open(`https://wa.me/${d.wa}?text=${encodeURIComponent(govde)}`, "_blank", "noopener"); return; }
+            if (d.eposta) {
+              const konu = [d.konu || "", konuMetin()].filter(Boolean).join(" - ");
+              location.href = `mailto:${d.eposta}?subject=${encodeURIComponent(konu)}&body=${encodeURIComponent(govde.replace(/\n/g, "\r\n"))}`;
+            }
+          });
+        });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      form(s, P, az);
+    });
+  })();
+</script>

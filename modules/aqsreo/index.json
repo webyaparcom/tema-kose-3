@@ -1,0 +1,54 @@
+{
+  "name": "Ekip Yazar Sütunu — gazete sütunlarında köşe yazarları",
+  "description": "Çift çizgili gazete başlığı altında çok sütunlu (sütun çizgili) yazar akışı: ilk yazar tam genişlikte manşet (büyük yuvarlak portre, büyük başlık, süslü ilk harfli tanıtım); diğerleri sütunlarda imza (gri tonlu küçük portre, küçük büyük harfli ad, unvan), son yazısının başlığı, tarihi ve bir önceki yazı bağlantısı. Yazı yoksa tanıtım. Veri ek alanı: `yazilar: [{ baslik, url, tarih (YYYY-AA-GG) }]`. Editoryal çok sütunlu akış (CSS columns + column-rule + column-span manşet): ekip-zikzak'ın büyük portre/özgeçmiş satırlarından farklı olarak kişi değil yazısı öne çıkar — imza + son yazı başlığı + sayfa diliyle tarih; ızgara/kart yerine gazete sayfası. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "history_edu",
+  "category": "team",
+  "subCategory": "columnist",
+  "tags": [
+    "team",
+    "columnist",
+    "editorial",
+    "newspaper",
+    "multi-column",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "ad": "ad soyad (zorunlu; düz metin ya da dil sözlüğü)",
+      "unvan": "görev / unvan (dil sözlüğü)",
+      "metin": "kısa tanıtım (dil sözlüğü)",
+      "img": "portre görseli (yoksa baş harfler)",
+      "bolum": "bölüm (dil sözlüğü ya da desing.departments id'si)",
+      "eposta": "e-posta (mailto)",
+      "telefon": "telefon (tel:)",
+      "url": "profil sayfası bağlantısı",
+      "social": "[{ ad, url (http(s)/mailto/tel), ikon (Material Symbols) }]"
+    }
+  }
+}

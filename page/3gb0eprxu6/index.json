@@ -1,0 +1,39 @@
+{
+  "id": "3gb0eprxu6",
+  "name": {
+    "tr": "Yazılar",
+    "en": "Columns",
+    "ar": "المقالات"
+  },
+  "description": {
+    "tr": "Haftanın yazıları (kurgusal).",
+    "en": "This week’s columns (fictional).",
+    "ar": "مقالات الأسبوع (افتراضي)."
+  },
+  "keyword": {
+    "tr": "yazılar, köşe",
+    "en": "columns",
+    "ar": "مقالات"
+  },
+  "path": "referanslar",
+  "icon": "article",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "gzqn82"
+    ],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Yazılar",
+    "en": "Columns",
+    "ar": "المقالات"
+  },
+  "date": "2026-11-16T22:44:14.816Z",
+  "update": "2026-11-16T22:49:44.096Z"
+}

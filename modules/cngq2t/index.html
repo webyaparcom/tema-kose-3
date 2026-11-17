@@ -1,0 +1,101 @@
+<footer class="modulex-alt-kitap-sirt{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-alt-kitap-sirt-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</footer>
+
+<style>
+  /* alt-kitap-sirt — Tek dikey site adı yerine her grup kendi dikey sırtını taşır; dört renkli sırt tonu, değişen kitap boyu ve raf gölgesi bir kütüphane rafı kurar — yazar, yayın, eğitim ve kamu bilgi siteleri için; telefonda da sırtlar dikey kalır. */
+  .modulex-alt-kitap-sirt { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-alt-kitap-sirt *, .modulex-alt-kitap-sirt *::before, .modulex-alt-kitap-sirt *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-alt-kitap-sirt :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-alt-kitap-sirt :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-alt-kitap-sirt :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-alt-kitap-sirt :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-alt-kitap-sirt img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-alt-kitap-sirt) img { height: auto; }
+  .modulex-alt-kitap-sirt [hidden] { display: none !important; }
+  .modulex-alt-kitap-sirt :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-alt-kitap-sirt :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-alt-kitap-sirt-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-alt-kitap-sirt-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-alt-kitap-sirt--bassiz .modulex-alt-kitap-sirt-bas { display: none; }
+  .modulex-alt-kitap-sirt-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-alt-kitap-sirt-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-alt-kitap-sirt-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-alt-kitap-sirt-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-alt-kitap-sirt-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-alt-kitap-sirt-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-kitap-sirt-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-alt-kitap-sirt-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-alt-kitap-sirt-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-alt-kitap-sirt-bag { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+  .modulex-alt-kitap-sirt-bag:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-alt-kitap-sirt-bag[aria-current="page"] { color: --accentInk--; font-weight: 700; }
+  .modulex-alt-kitap-sirt-logo { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+  .modulex-alt-kitap-sirt-logo img { width: auto; max-height: --logoH--; }
+  .modulex-alt-kitap-sirt-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-alt-kitap-sirt-bbaslik { margin-block-end: 14px; color: --accentInk--; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-alt-kitap-sirt-sayfalar, .modulex-alt-kitap-sirt-baglantilar, .modulex-alt-kitap-sirt-iletisim, .modulex-alt-kitap-sirt-yasal { display: grid; gap: 9px; }
+  .modulex-alt-kitap-sirt-il { display: flex; align-items: flex-start; gap: 10px; }
+  .modulex-alt-kitap-sirt-il-ic { display: grid; gap: 2px; }
+  .modulex-alt-kitap-sirt-il-etiket { color: --muted--; font-size: 0.8rem; }
+  .modulex-alt-kitap-sirt-il-ikon { flex: none; color: --accentInk--; font-size: 20px; }
+  .modulex-alt-kitap-sirt-saatler { display: grid; gap: 6px; }
+  .modulex-alt-kitap-sirt-saat { display: flex; justify-content: space-between; gap: 16px; }
+  .modulex-alt-kitap-sirt-saat dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .modulex-alt-kitap-sirt-sosyal { display: flex; flex-wrap: wrap; gap: 10px; }
+  .modulex-alt-kitap-sirt-sosyal-a { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid --cizgi--; border-radius: 50%; color: inherit; font-size: 18px; transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+  .modulex-alt-kitap-sirt-sosyal-a:hover { border-color: --accent--; background: --accent--; color: --accentText--; transform: translateY(-2px); }
+  .modulex-alt-kitap-sirt-hakkinda { max-width: 46ch; color: --muted--; }
+  .modulex-alt-kitap-sirt-telif { display: flex; flex-wrap: wrap; gap: 4px 14px; color: --muted--; font-size: 0.9rem; }
+  .modulex-alt-kitap-sirt-dil:empty { display: none; }
+  .modulex-alt-kitap-sirt-yukari { display: inline-grid; place-items: center; flex: none; width: 46px; height: 46px; border-radius: 50%; background: --accent--; color: --accentText--; text-decoration: none; transition: transform 0.25s ease; }
+  .modulex-alt-kitap-sirt-yukari:hover { transform: translateY(-3px); }
+  .modulex-alt-kitap-sirt-bulten { display: grid; gap: 8px; }
+  .modulex-alt-kitap-sirt-nl-etiket { font-size: 0.9rem; font-weight: 700; }
+  .modulex-alt-kitap-sirt-nl-satir { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-alt-kitap-sirt-nl-girdi { flex: 1 1 200px; min-width: 0; min-height: 48px; padding: 10px 18px; border: 1px solid --cizgi--; border-radius: 999px; background: --bg--; color: --text--; font: inherit; }
+  .modulex-alt-kitap-sirt-nl-dugme { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 10px 22px; border: 0; border-radius: 999px; background: --accent--; color: --accentText--; font: inherit; font-weight: 700; transition: transform 0.2s ease; }
+  .modulex-alt-kitap-sirt-nl-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-kitap-sirt-nl-dugme .material-symbols-outlined { font-size: 18px; }
+  .modulex-alt-kitap-sirt-nl-durum:empty { display: none; }
+  .modulex-alt-kitap-sirt-nl-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+  .modulex-alt-kitap-sirt-nl-metin { color: --muted--; }
+
+  .modulex-alt-kitap-sirt-ks-ust { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 40px; margin-block-end: 40px; }
+  .modulex-alt-kitap-sirt-ks-marka { display: grid; gap: 12px; }
+  .modulex-alt-kitap-sirt-ks-uc { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+  .modulex-alt-kitap-sirt-ks-raf { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px; border-block-end: 10px solid --text--; box-shadow: 0 16px 18px -16px color-mix(in srgb, --text-- 70%, transparent); }
+  .modulex-alt-kitap-sirt-ks-kitap { display: flex; flex: 1 1 230px; min-width: 0; min-height: calc(210px + var(--ks, 0) * 22px); border-start-start-radius: 6px; border-start-end-radius: 6px; background: --kartBg--; box-shadow: inset 0 0 0 1px --cizgi--; transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease; }
+  .modulex-alt-kitap-sirt-ks-kitap:hover { transform: translateY(-12px); box-shadow: inset 0 0 0 1px --cizgi--, 0 20px 30px -24px color-mix(in srgb, --text-- 70%, transparent); }
+  .modulex-alt-kitap-sirt-ks-sirt { display: flex; flex: none; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px; width: 54px; padding-block: 16px; border-start-start-radius: 6px; background: --vurguBg--; color: --vurguText--; }
+  .modulex-alt-kitap-sirt-ks-sirt::before, .modulex-alt-kitap-sirt-ks-sirt::after { content: ""; flex: none; width: 62%; height: 6px; border-block: 1px solid currentColor; opacity: 0.7; }
+  .modulex-alt-kitap-sirt-ks-sirt span { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--mx-font-heading, inherit); font-size: 0.92rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
+  .modulex-alt-kitap-sirt-ks-kitap:nth-child(4n+2) .modulex-alt-kitap-sirt-ks-sirt { background: --text--; color: --bg--; }
+  .modulex-alt-kitap-sirt-ks-kitap:nth-child(4n+3) .modulex-alt-kitap-sirt-ks-sirt { background: color-mix(in srgb, --accent-- 24%, --bg--); color: --text--; }
+  .modulex-alt-kitap-sirt-ks-kitap:nth-child(4n) .modulex-alt-kitap-sirt-ks-sirt { background: color-mix(in srgb, --text-- 14%, --bg--); color: --text--; }
+  .modulex-alt-kitap-sirt-ks-sayfa { display: grid; align-content: start; gap: 12px; flex: 1; min-width: 0; padding: 22px 20px 26px; }
+  .modulex-alt-kitap-sirt-ks-dip { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding-block-start: 28px; }
+  .modulex-alt-kitap-sirt-ks-dip .modulex-alt-kitap-sirt-telif { margin-inline-end: auto; }
+  .modulex-alt-kitap-sirt-ks-yasal { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.9rem; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-kitap-sirt-ks-sirt span { letter-spacing: 0; }
+  @media (max-width: 768px) {
+    .modulex-alt-kitap-sirt-ks-raf { gap: 10px; border-block-end-width: 8px; }
+    .modulex-alt-kitap-sirt-ks-kitap { flex-basis: 100%; min-height: 0; }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-kitap-sirt :is(.modulex-alt-kitap-sirt-baslik, .modulex-alt-kitap-sirt-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-kitap-sirt-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-alt-kitap-sirt { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-alt-kitap-sirt *, .modulex-alt-kitap-sirt *::before, .modulex-alt-kitap-sirt *::after { animation: none !important; transition: none !important; }
+  }
+</style>

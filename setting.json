@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Mürekkep Masası (kurgusal): altı bağımsız köşe yazarının kolektifi; haftanın yazıları, yazar sütunları, söyleşi ve atölye daveti. Demo site; içerik kurgusaldır.",
+    "en": "Murekkep Masasi (fictional): a collective of six independent columnists; the week’s columns, writer columns, talk and workshop invitations. Demo site; content is fictional.",
+    "ar": "مورَكّب ماساسي (افتراضي): تجمّع ستة كتّاب أعمدة مستقلين؛ مقالات الأسبوع وأعمدة الكتّاب ودعوات الحوار والورش. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "köşe yazarları, kolektif, deneme, söyleşi daveti, yazı atölyesi",
+    "en": "columnists, collective, essays, talk invitation, writing workshop",
+    "ar": "كتّاب أعمدة، تجمّع، مقالات، دعوة لحوار، ورشة كتابة"
+  },
+  "category": "Kurumsal",
+  "name": "Mürekkep Masası",
+  "domain": "kose-3.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "nunito-sans",
+    "heading": "fraunces",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#E0B341",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "6px",
+    "--mx-radius-md": "10px",
+    "--mx-radius-lg": "14px",
+    "--mx-radius-xl": "19px"
+  },
+  "icon": "icon.png"
+}
