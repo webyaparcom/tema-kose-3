@@ -4,12 +4,16 @@
   "description": {
     "tr": "Mürekkep Masası (kurgusal): altı bağımsız köşe yazarının kolektifi; haftanın yazıları, yazar sütunları, söyleşi ve atölye daveti. Demo site; içerik kurgusaldır.",
     "en": "Murekkep Masasi (fictional): a collective of six independent columnists; the week’s columns, writer columns, talk and workshop invitations. Demo site; content is fictional.",
-    "ar": "مورَكّب ماساسي (افتراضي): تجمّع ستة كتّاب أعمدة مستقلين؛ مقالات الأسبوع وأعمدة الكتّاب ودعوات الحوار والورش. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "مورَكّب ماساسي (افتراضي): تجمّع ستة كتّاب أعمدة مستقلين؛ مقالات الأسبوع وأعمدة الكتّاب ودعوات الحوار والورش. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Mürekkep Masası (fiktiv): Kollektiv aus sechs unabhängigen Kolumnisten; Wochenspalten, Autorenspalten, Gespräche und Workshop-Einladungen. Demo-Seite; Inhalte sind fiktiv.",
+    "ru": "Mürekkep Masası (вымышленное): коллектив из шести независимых колумнистов; еженедельные колонки, авторские рубрики, беседы и приглашения на воркшопы. Демо-сайт; контент вымышленный."
   },
   "keyword": {
     "tr": "köşe yazarları, kolektif, deneme, söyleşi daveti, yazı atölyesi",
     "en": "columnists, collective, essays, talk invitation, writing workshop",
-    "ar": "كتّاب أعمدة، تجمّع، مقالات، دعوة لحوار، ورشة كتابة"
+    "ar": "كتّاب أعمدة، تجمّع، مقالات، دعوة لحوار، ورشة كتابة",
+    "de": "Kolumnisten, Kollektiv, Essay, Gesprächseinladung, Schreibwerkstatt",
+    "ru": "колумнисты, коллектив, эссе, приглашение на беседу, писательская мастерская"
   },
   "category": "Kurumsal",
   "name": "Mürekkep Masası",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

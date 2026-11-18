@@ -2,7 +2,9 @@
   "name": {
     "tr": "Yazışma",
     "en": "Write",
-    "ar": "المراسلة"
+    "ar": "المراسلة",
+    "de": "Schreiben",
+    "ru": "Написать"
   },
   "status": "play",
   "category": "",
@@ -22,7 +24,9 @@
   "description": {
     "tr": "Kolektife mesaj (demo).",
     "en": "A message to the collective (demo).",
-    "ar": "رسالة إلى التجمّع (تجريبي)."
+    "ar": "رسالة إلى التجمّع (تجريبي).",
+    "de": "Nachricht an das Kollektiv (Demo).",
+    "ru": "Сообщение коллективу (демо)."
   },
   "spot": {
     "tr": "",
@@ -33,12 +37,16 @@
   "title": {
     "tr": "Yazışma",
     "en": "Write",
-    "ar": "المراسلة"
+    "ar": "المراسلة",
+    "de": "Schreiben",
+    "ru": "Написать"
   },
   "keyword": {
     "tr": "iletişim",
     "en": "contact",
-    "ar": "اتصال"
+    "ar": "اتصال",
+    "de": "Kontakt",
+    "ru": "контакты"
   },
   "text": {},
   "update": "2026-11-16T22:49:44.102Z",

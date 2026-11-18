@@ -3,17 +3,23 @@
   "name": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "description": {
     "tr": "Kalite politikamız",
     "en": "Our quality policy",
-    "ar": "سياسة الجودة لدينا"
+    "ar": "سياسة الجودة لدينا",
+    "de": "Unsere Qualitätspolitik",
+    "ru": "Наша политика качества"
   },
   "keyword": {
     "tr": "Kalite Politikamız",
     "en": "quality policy, quality, continuous improvement",
-    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "path": "kalitepolitikamiz",
   "icon": "verified",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Kalite Politikamız</h2>\n<p>Bu site kurgusal bir demodur; yazılar başka bir yayından alınmamıştır, okur mesajları saklanmaz.</p>",
     "en": "<h2>Our quality policy</h2>\n<p>This site is a fictional demo; the columns are not taken from any publication and reader messages are not stored.</p>",
-    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>هذا الموقع عرض تجريبي افتراضي؛ لم تُؤخذ المقالات من أي منشور ولا تُحفظ رسائل القرّاء.</p>"
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>هذا الموقع عرض تجريبي افتراضي؛ لم تُؤخذ المقالات من أي منشور ولا تُحفظ رسائل القرّاء.</p>",
+    "de": "<h2>Unsere Qualitätsrichtlinie</h2>\n<p>Diese Seite ist eine fiktive Demo; die Artikel stammen nicht aus anderen Publikationen, Leser-Nachrichten werden nicht gespeichert.</p>",
+    "ru": "<h2>Наша политика качества</h2>\n<p>Этот сайт является фиктивным демо; статьи не заимствованы из других изданий, сообщения читателей не сохраняются.</p>"
   },
   "title": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "date": "2026-11-16T22:44:14.449Z",
   "update": "2026-11-16T22:49:44.114Z",

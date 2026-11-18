@@ -5,12 +5,16 @@
       "name": {
         "tr": "Davet",
         "en": "Invite",
-        "ar": "دعوة"
+        "ar": "دعوة",
+        "de": "Einladung",
+        "ru": "Приглашение"
       },
       "description": {
         "tr": "Söyleşi, atölye ve konuk köşe (kurgusal).",
         "en": "Talks, workshops and guest columns (fictional).",
-        "ar": "حوارات وورش وعمود ضيف (افتراضي)."
+        "ar": "حوارات وورش وعمود ضيف (افتراضي).",
+        "de": "Gespräche, Workshops und Gastbeiträge (fiktiv).",
+        "ru": "Беседы, мастер-классы и гостевые колонки (вымышленные)."
       },
       "path": "hizmetler",
       "icon": "mail",
@@ -29,7 +33,9 @@
       "name": {
         "tr": "Yazarlar",
         "en": "Writers",
-        "ar": "الكتّاب"
+        "ar": "الكتّاب",
+        "de": "Autoren",
+        "ru": "Авторы"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -50,7 +56,9 @@
       "description": {
         "tr": "Altı kurgusal köşe yazarı ve yol defteri.",
         "en": "Six fictional columnists and the road book.",
-        "ar": "ستة كتّاب أعمدة افتراضيين ودفتر الطريق."
+        "ar": "ستة كتّاب أعمدة افتراضيين ودفتر الطريق.",
+        "de": "Sechs fiktive Kolumnisten und das Reisetagebuch.",
+        "ru": "Шесть вымышленных колумнистов и дорожный дневник."
       }
     },
     {
@@ -58,12 +66,16 @@
       "name": {
         "tr": "Yazılar",
         "en": "Columns",
-        "ar": "المقالات"
+        "ar": "المقالات",
+        "de": "Kolumnen",
+        "ru": "Колонки"
       },
       "description": {
         "tr": "Haftanın yazıları (kurgusal).",
         "en": "This week’s columns (fictional).",
-        "ar": "مقالات الأسبوع (افتراضي)."
+        "ar": "مقالات الأسبوع (افتراضي).",
+        "de": "Beiträge der Woche (fiktiv).",
+        "ru": "Статьи недели (вымышленные)."
       },
       "path": "referanslar",
       "icon": "article",
@@ -82,7 +94,9 @@
       "name": {
         "tr": "Yazışma",
         "en": "Write",
-        "ar": "المراسلة"
+        "ar": "المراسلة",
+        "de": "Schreiben",
+        "ru": "Написать"
       },
       "status": "play",
       "id": "iletisim",
@@ -102,7 +116,9 @@
       "description": {
         "tr": "Kolektife mesaj (demo).",
         "en": "A message to the collective (demo).",
-        "ar": "رسالة إلى التجمّع (تجريبي)."
+        "ar": "رسالة إلى التجمّع (تجريبي).",
+        "de": "Nachricht an das Kollektiv (Demo).",
+        "ru": "Сообщение коллективу (демо)."
       }
     }
   ],
