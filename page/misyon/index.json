@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Farklı kentlerden altı sesi aynı masada, okura açık bir arşivle buluşturmak.</p>",
     "en": "<h2>Our mission</h2>\n<p>To bring six voices from different cities to one table, with an archive open to readers.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>جمع ستة أصوات من مدن مختلفة على طاولة واحدة بأرشيف مفتوح للقرّاء.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>جمع ستة أصوات من مدن مختلفة على طاولة واحدة بأرشيف مفتوح للقرّاء.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Sechs Stimmen aus verschiedenen Städten an einem Tisch zusammenzubringen, mit einem für die Leserschaft offenen Archiv.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Собрать за одним столом шесть голосов из разных городов с архивом, открытым для читателя.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T22:44:14.449Z",
   "update": "2026-11-16T22:49:44.109Z",

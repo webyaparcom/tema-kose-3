@@ -2,7 +2,9 @@
   "name": {
     "tr": "Yazarlar",
     "en": "Writers",
-    "ar": "الكتّاب"
+    "ar": "الكتّاب",
+    "de": "Autoren",
+    "ru": "Авторы"
   },
   "status": "play",
   "category": "",
@@ -23,7 +25,9 @@
   "description": {
     "tr": "Altı kurgusal köşe yazarı ve yol defteri.",
     "en": "Six fictional columnists and the road book.",
-    "ar": "ستة كتّاب أعمدة افتراضيين ودفتر الطريق."
+    "ar": "ستة كتّاب أعمدة افتراضيين ودفتر الطريق.",
+    "de": "Sechs fiktive Kolumnisten und das Reisetagebuch.",
+    "ru": "Шесть вымышленных колумнистов и дорожный дневник."
   },
   "spot": {
     "tr": "",
@@ -34,12 +38,16 @@
   "title": {
     "tr": "Yazarlar",
     "en": "Writers",
-    "ar": "الكتّاب"
+    "ar": "الكتّاب",
+    "de": "Autoren",
+    "ru": "Авторы"
   },
   "keyword": {
     "tr": "yazarlar, kolektif",
     "en": "writers, collective",
-    "ar": "كتّاب، تجمّع"
+    "ar": "كتّاب، تجمّع",
+    "de": "Autoren, Kollektiv",
+    "ru": "авторы, коллектив"
   },
   "text": {},
   "update": "2026-11-16T22:49:44.087Z",

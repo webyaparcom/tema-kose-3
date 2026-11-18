@@ -3,17 +3,23 @@
   "name": {
     "tr": "Vizyon",
     "en": "Vision",
-    "ar": "الرؤية"
+    "ar": "الرؤية",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "description": {
     "tr": "Vizyonumuz",
     "en": "Our vision",
-    "ar": "رؤيتنا"
+    "ar": "رؤيتنا",
+    "de": "Unsere Vision",
+    "ru": "Наше видение"
   },
   "keyword": {
     "tr": "Vizyon",
     "en": "vision, our vision, goals",
-    "ar": "الرؤية, رؤيتنا, الأهداف"
+    "ar": "الرؤية, رؤيتنا, الأهداف",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "path": "vizyon",
   "icon": "visibility",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Vizyonumuz</h2>\n<p>Reklamsız, imzalı ve yazışmaya açık bir köşe yazısı evi.</p>",
     "en": "<h2>Our vision</h2>\n<p>An ad-free, signed home for columns, open to correspondence.</p>",
-    "ar": "<h2>رؤيتنا</h2>\n<p>بيت لمقالات الرأي بلا إعلانات وبتوقيع أصحابها ومفتوح للمراسلة.</p>"
+    "ar": "<h2>رؤيتنا</h2>\n<p>بيت لمقالات الرأي بلا إعلانات وبتوقيع أصحابها ومفتوح للمراسلة.</p>",
+    "de": "<h2>Unsere Vision</h2>\n<p>Ein Haus für Kolumnen: werbefrei, namentlich gezeichnet und offen für Briefwechsel.</p>",
+    "ru": "<h2>Наше видение</h2>\n<p>Дом колонок без рекламы, с подписью автора и открытый для переписки.</p>"
   },
   "title": {
     "tr": "Vizyon",
     "en": "Vision",
-    "ar": "الرؤية"
+    "ar": "الرؤية",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "date": "2026-11-16T22:44:14.449Z",
   "update": "2026-11-16T22:49:44.111Z",

@@ -3,17 +3,23 @@
   "name": {
     "tr": "Davet",
     "en": "Invite",
-    "ar": "دعوة"
+    "ar": "دعوة",
+    "de": "Einladung",
+    "ru": "Приглашение"
   },
   "description": {
     "tr": "Söyleşi, atölye ve konuk köşe (kurgusal).",
     "en": "Talks, workshops and guest columns (fictional).",
-    "ar": "حوارات وورش وعمود ضيف (افتراضي)."
+    "ar": "حوارات وورش وعمود ضيف (افتراضي).",
+    "de": "Gespräche, Workshops und Gastbeiträge (fiktiv).",
+    "ru": "Беседы, мастер-классы и гостевые колонки (вымышленные)."
   },
   "keyword": {
     "tr": "davet, atölye",
     "en": "invite, workshop",
-    "ar": "دعوة، ورشة"
+    "ar": "دعوة، ورشة",
+    "de": "Einladung, Werkstatt",
+    "ru": "приглашение, мастерская"
   },
   "path": "hizmetler",
   "icon": "mail",
@@ -32,7 +38,9 @@
   "title": {
     "tr": "Davet",
     "en": "Invite",
-    "ar": "دعوة"
+    "ar": "دعوة",
+    "de": "Einladung",
+    "ru": "Приглашение"
   },
   "date": "2026-11-16T22:44:14.786Z",
   "update": "2026-11-16T22:49:44.081Z"
